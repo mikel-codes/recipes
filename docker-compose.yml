@@ -1,0 +1,48 @@
+# Each thing that Docker Compose runs is referred to as
+# a "service". web service contains rails app; db service contains postgres server
+version: "3.8"
+services:
+  db: #create a container for postgres when run
+    image: postgres
+    volumes:
+      # We need to tell Docker where on the PostgreSQL
+      # container we want to keep the PostgreSQL data.
+      # In this case we're telling it to use a directory
+      # called /var/lib/postgresql/data, although it
+      # conceivably could have been something else.
+      #
+      # We're associating this directory with something
+      # called a volume. (You can see all your Docker
+      # volumes by running +docker volume ls+.) The name
+      # of our volume is follows appname/tmp/db.
+      - ./tmp/db:/var/lib/postgresql/data
+    env_file: .env
+    #environment:
+    # POSTGRES_PASSWORD: top1343
+    #POSTGRES_USER: topman
+
+  web:
+    # the location of the root dir, from which we start building
+    build:
+      context: .
+      dockerfile: Dockerfile
+    #The command to be run with docker-compose up
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    #Expose port 3000
+    volumes:
+      - .:/rails_react_recipe
+      - gem_cache:/usr/local/bundle/gems
+      - node_modules:/rails_react_recipe/node_modules
+    ports:
+      - "3000:3000"
+    env_file: .env
+    environment:
+      RAILS_ENV: development
+      PGPASSWORD: top1343
+      PGUSER: topman
+    depends_on:
+      - db
+
+volumes:
+  gem_cache:
+  node_modules:

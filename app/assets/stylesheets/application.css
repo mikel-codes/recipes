@@ -1,0 +1,182 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/* General Demo Style */
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+
+
+*,
+*:after,
+*:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+body {
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    color: #fff;
+    background: white;
+}
+
+a {
+    color: #c0392b;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #333;
+}
+
+/* Header Style */
+.main,
+.container>header {
+    margin: 0 auto;
+    padding: 2em;
+}
+
+.container>header {
+    text-align: center;
+    background: linear-gradient(45deg, #333, #777, #fff);
+
+    /*background: rgb(48, 46, 46);*/
+    padding: 3em;
+    text-align: end;
+}
+
+.container>header h1 {
+    font-size: 2.625em;
+    line-height: 1.3;
+    margin: 0;
+    font-weight: 300;
+}
+
+.container>header span {
+    display: block;
+    font-size: 60%;
+    opacity: 0.7;
+    padding: 0 0 0.6em 0.1em;
+}
+
+/* Main Content */
+.main {
+    max-width: 69em;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 0 2em;
+    min-height: 300px;
+    position: relative;
+}
+
+.column:nth-child(2) {
+    box-shadow: -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.column p {
+    font-weight: 300;
+    font-size: 2em;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    line-height: 1.5;
+}
+
+/* To Navigation Style */
+
+
+.codrops-top a:hover {
+    color: #e74c3c;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.codrops-top span.right {
+    float: right;
+}
+
+.codrops-top span.right a {
+    float: left;
+    display: block;
+}
+
+.codrops-icon:before {
+    font-family: 'codropsicons';
+    margin: 0 4px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.codrops-icon-drop:before {
+    content: "\e001";
+}
+
+.codrops-icon-prev:before {
+    content: "\e004";
+}
+
+
+
+@media screen and (max-width: 46.0625em) {
+    .column {
+        width: 100%;
+        min-width: auto;
+        min-height: auto;
+        padding: 1em;
+    }
+
+    .column p {
+        text-align: left;
+        font-size: 1.5em;
+    }
+
+    .column:nth-child(2) {
+        box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+@media screen and (max-width: 25em) {
+
+    .codrops-icon span {
+        display: none;
+    }
+
+}

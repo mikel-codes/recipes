@@ -1,0 +1,113 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+a {
+  color: #c0392b;
+  text-decoration: none;
+}
+
+a:hover,
+a:active {
+  color: #333;
+}
+
+.box {
+  background-blend-mode: overlay;
+  width: 80%;
+  border: 3px solid green;
+  color: #444;
+  padding: 1em 4em;
+  background-color: blue;
+  box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+button {
+  border: none;
+  padding: 0.6em 1.2em;
+  background: darkslategrey;
+  color: wheat;
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-transform: unset;
+  display: inline-block;
+  margin: 3px 2px;
+  box-shadow: 1px 1px 1px 1px solid lightslategray;
+  //border-radius: 2px;
+  outline: 0;
+}
+
+button:active {
+  outline: 0;
+}
+
+.view {
+  border-radius: 25px 25px 20px 25px;
+  margin-right: 0px;
+  height: 2em;
+  width: 10em;
+  padding: 4px 4px;
+  font-size: small;
+}
+
+.photo {
+  height: 15em;
+  width: 20em;
+  border-radius: 10% 40%;
+  margin-left: 20%;
+  margin-top: 10px;
+  border: 0px 50%;
+  z-index: 10;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {
+    left: 0em;
+  }
+
+  to {
+    left: 10em;
+  }
+}
+
+.error {
+  color: indianred;
+  background: transparent;
+  font-size: small;
+  float: left;
+  padding: 0.1em 0.2em;
+}
+
+@media screen and (max-width: 34em) {
+  .photo {
+    border-radius: 0;
+    width: 10em;
+    height: 10em;
+    margin-left: 9em;
+    margin-top: 16em;
+    display: block;
+    position: absolute;
+    z-index: 10;
+
+    animation-name: eg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes eg {
+    from {
+      left: 0em;
+    }
+
+    to {
+      left: 12%;
+    }
+  }
+}

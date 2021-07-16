@@ -1,0 +1,183 @@
+/* card-layout. css 
+ */
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    justify-content: space-between;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #c9c9c9;
+    border-radius: 7px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.card>img:first-child {
+    border-radius: 7px 7px 0 0;
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 8em;
+}
+
+.card h3 {
+    color: rebeccapurple;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+}
+
+.card h3 em {
+    padding: 0.25em;
+    background-color: #eddbff;
+    border-radius: 4px;
+}
+
+.card p {
+    color: #757575;
+    line-height: 1.5;
+}
+
+.button {
+    /* Reset text link default */
+    text-decoration: none;
+    background-color: rebeccapurple;
+    color: #fff;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.card+.card {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 40.0625em) {
+    .card-row {
+        display: block;
+        grid-template-columns: repeat(3, 20%);
+    }
+
+    .card {
+        width: 80%;
+        margin-left: 5%;
+        font-size: 14px;
+
+    }
+}
+
+/*
+.property-card {
+    height: 18em;
+    width: 14em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    float: left;
+    flex-grow: 3;
+    position: relative;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    -webkit-box-shadow: 10px 10px 10px gray, -15px -15px 27px #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* ^-- The margin bottom is necessary for the drop shadow otherwise it gets clipped in certain cases. */
+
+/* Top Half of card, image. */
+/*
+.property-image {
+    height: 6em;
+    width: 14em;
+    padding: 1em 2em;
+    position: absolute;
+    top: 0px;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    background-image: url("../images/recipe.jpeg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Bottom Card Section */
+/*
+.property-description {
+    background-color: #FAFAFC;
+    height: 12em;
+    width: 14em;
+    position: absolute;
+    bottom: 0em;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 0.5em 1em;
+    text-align: center;
+}
+
+/* Social Icons */
+/*
+.property-social-icons {
+    width: 1em;
+    height: 1em;
+    background-color: black;
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    -webkit-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+/* Property Cards Hover States */
+/*
+.property-card:hover .property-description {
+    height: 0em;
+    padding: 0px 1em;
+}
+
+.property-card:hover .property-image {
+    height: 18em;
+}
+
+.property-card:hover .property-social-icons {
+    background-color: white;
+}
+
+.property-card:hover .property-social-icons:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+
+
+.property-image-title {
+    text-align: center;
+    position: Relative;
+    top: 30%;
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+    color: black;
+    font-size: 1.2em;
+}
+
+.property-card:hover .property-image-title {
+    opacity: 1;
+}
+
+.property-card+.property-card {
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+*/
